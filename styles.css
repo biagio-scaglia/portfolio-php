@@ -1,0 +1,670 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #f7f7f7;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header */
+header {
+    background-color: #2a2a72;
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+header h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+header h1:hover {
+    transform: scale(1.1);
+}
+
+header p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 10px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+header p:hover {
+    opacity: 1;
+}
+
+/* Sezione Introduzione */
+#intro {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+#intro h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+#intro h2:hover {
+    transform: translateY(-5px);
+}
+
+#intro p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+#intro p:hover {
+    color: #2a2a72;
+}
+
+/* Sezione Competenze */
+#skills {
+    padding: 80px 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+#skills h2 {
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+#skills h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 50px;
+    height: 3px;
+    background-color: #fd7e14;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+#skills h2:hover::after {
+    width: 100px;
+}
+
+#skills ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+#skills ul li {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 15px 30px;
+    background-color: #fd7e14;
+    color: #fff;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+#skills ul li:hover {
+    background-color: #e96d00;
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Sezione Progetti */
+#projects {
+    padding: 80px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 3rem;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+#projects h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 50px;
+    height: 3px;
+    background-color: #fd7e14;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+#projects h2:hover::after {
+    width: 100px;
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.project-card {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    filter: brightness(1.1);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+.project-card h3 {
+    font-size: 1.8rem;
+    color: #333;
+    padding: 15px;
+    transition: color 0.3s ease;
+}
+
+.project-card:hover h3 {
+    color: #fd7e14;
+}
+
+.project-card p {
+    font-size: 1.1rem;
+    color: #666;
+    padding: 0 15px 15px;
+    transition: color 0.3s ease;
+}
+
+.project-card .btn {
+    display: inline-block;
+    background-color: #fd7e14;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 25px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.project-card .btn:hover {
+    background-color: #e96d00;
+    transform: scale(1.05);
+}
+
+/* Sezione Testimonianze */
+#testimonials {
+    padding: 80px 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+#testimonials h2 {
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+}
+
+.testimonial {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #555;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.testimonial:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05);
+}
+
+.testimonial p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Sezione Contatti */
+#contact {
+    padding: 80px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+}
+
+#contact form {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1.1rem;
+    background-color: #f7f7f7;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #fd7e14;
+    background-color: #fff;
+}
+
+textarea {
+    height: 150px;
+}
+
+button[type="submit"] {
+    background-color: #fd7e14;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #e96d00;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+footer a {
+    color: #fd7e14;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #e96d00;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 3rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
+    }
+
+    #projects .project-list {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .project-card {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #skills ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    button[type="submit"] {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    #intro h2,
+    #projects h2,
+    #skills h2,
+    #testimonials h2,
+    #contact h2 {
+        font-size: 2rem;
+    }
+
+    .testimonial {
+        padding: 20px;
+        font-size: 1rem;
+    }
+
+    .project-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .project-card p {
+        font-size: 1rem;
+    }
+}
+
+/* Sezione Dettagli del Progetto */
+#project-detail {
+    padding: 80px 20px;
+    background-color: #fff;
+    color: #333;
+}
+
+#project-detail .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#project-detail h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #2a2a72;
+}
+
+.project-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.project-description {
+    flex: 1;
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.project-gallery {
+    flex: 1;
+    text-align: left;
+    max-width: 500px;
+}
+
+.project-gallery h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fd7e14;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.gallery-item {
+    width: 48%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.project-actions {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-actions .btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 25px;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.project-actions .edit {
+    background-color: #fd7e14;
+}
+
+.project-actions .edit:hover {
+    background-color: #e96d00;
+    transform: scale(1.05);
+}
+
+.project-actions .delete {
+    background-color: #e74c3c;
+}
+
+.project-actions .delete:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+    .project-details {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-description {
+        margin-bottom: 30px;
+    }
+
+    .gallery-item {
+        width: 100%;
+    }
+
+    .project-actions {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #project-detail h2 {
+        font-size: 2.5rem;
+    }
+
+    .project-description {
+        font-size: 1rem;
+    }
+
+    .project-gallery h3 {
+        font-size: 1.8rem;
+    }
+
+    .project-actions .btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+/* Sezione Aggiungi Progetto */
+#add-project {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+#add-project .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#add-project h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2a2a72;
+}
+
+#add-project p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.project-form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 1rem;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #fd7e14;
+    outline: none;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.file-info {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 5px;
+}
+
+.form-actions {
+    margin-top: 30px;
+}
+
+.form-actions .btn {
+    padding: 12px 30px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #fd7e14;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.form-actions .btn:hover {
+    background-color: #e96d00;
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+    #add-project .container {
+        padding: 20px;
+    }
+
+    #add-project h2 {
+        font-size: 2rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.95rem;
+    }
+}
